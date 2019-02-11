@@ -61,7 +61,7 @@ ENV TERM dumb
 
 COPY index.php /var/www/html/
 COPY run-lamp.sh /usr/sbin/
-COPY mydb.sql /var/lib/mysql
+COPY ./dump/mydb.sql /var/lib/mysql
 
 RUN a2enmod rewrite
 RUN ln -s /usr/bin/nodejs /usr/bin/node
